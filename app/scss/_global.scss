@@ -1,17 +1,38 @@
+html,
 body {
-@extend %quicksand-500; 
-font-size: 16px;
-line-height: 26px;
-color: $default;
+	height: 100%;
+}
+
+body {
+  @extend %quicksand-500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $default;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+	flex-grow: 1;
 }
 
 .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
- .logo__img {
-      width: 183px;
-    }
+.logo__img {
+  width: 183px;
+}
 
+a {
+  @extend %quicksand-500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $default;
+}
+
+address {
+	font-style: normal;
+}
