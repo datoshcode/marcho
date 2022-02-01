@@ -20,6 +20,7 @@
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.6.0",
     "node-sass": "^6.0.0",
+    "rateyo": "^2.3.2",
     "sass": "^1.49.0",
     "slick-carousel": "^1.8.1"
   }
