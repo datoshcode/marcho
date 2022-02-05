@@ -48,3 +48,54 @@ a {
   margin: 0 auto 55px;
   max-width: 570px;
 }
+
+.breadcrumps {
+   display: inline-flex;
+   justify-content: center;
+   padding-left: 25px;
+   position: relative;
+ 
+   &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/home-icon.svg');
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    left: 0;
+   }
+
+  &__list {
+    display: flex;
+  }
+ &__item {
+  color: #727272;
+  padding-right: 40px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/angle-right.svg');
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 10px;
+    top: 9px;
+    right: 15px;
+  }
+  &:last-child {
+    color: $accent;
+    padding-right: 0;
+    &::after {
+    display: none;
+  }
+ }
+} 
+ &__link {
+  color: inherit;
+ }
+}
+
+.header--404-page {
+  background-color: $bg;
+}

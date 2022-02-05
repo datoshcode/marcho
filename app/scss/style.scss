@@ -73,6 +73,25 @@
 
 // end header
 
+// start top
+.top {
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .top__title {
+    @extend %roboto-400;
+  }
+}
+
+// end top
+
 // start top-slider
 .top-slider {
   background-image: url('../images/decor/top-slider-bg.png');
@@ -387,7 +406,7 @@
   }
 
   &__link {
- @extend %link-btn;
+    @extend %link-btn;
     margin-top: 55px;
   }
 }
@@ -488,16 +507,17 @@
     color: #ccccce;
     text-decoration: line-through;
   }
+
   &--sale {
-     .product-item__img-box::before {
-        content: "SALE";
-        @extend %btn;
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        padding: 8px 10px;
-        line-height: 1;
-     }
+    .product-item__img-box::before {
+      content: "SALE";
+      @extend %btn;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      padding: 8px 10px;
+      line-height: 1;
+    }
   }
 }
 
@@ -515,22 +535,26 @@
   background-size: cover;
   padding: 155px;
   text-align: center;
+
   &__inner {
     max-width: 570px;
     width: 100%;
     margin-left: auto;
   }
+
   &__subtitle {
     color: $accent;
     text-transform: uppercase;
     margin-bottom: 10px;
     font-size: 22px;
   }
+
   &__clock {
-   display: flex;
-   justify-content: space-between;
-   margin-top: 55px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
   }
+
   &__clock-item {
     background-color: #fff;
     box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
@@ -540,16 +564,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     span {
-    @extend %roboto-700;
-    font-size: 48px;
-    color: $title;
-    margin: 10px 0 7px;
+      @extend %roboto-700;
+      font-size: 48px;
+      color: $title;
+      margin: 10px 0 7px;
+    }
   }
-  }
-  
+
   &__link {
-   @extend %link-btn;
+    @extend %link-btn;
     margin-top: 55px;
   }
 
@@ -557,6 +582,7 @@
 
 .partners {
   padding-top: 75px;
+
   &__list {
     height: 170px;
     display: flex;
@@ -564,6 +590,7 @@
     align-items: center;
   }
 }
+
 // end promo
 
 // start blog
@@ -572,10 +599,12 @@
   background-image: url('../images/blog/blog-bg.svg');
   background-repeat: no-repeat;
   background-position: center center;
+
   &__items {
     display: flex;
     justify-content: space-between;
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -588,30 +617,37 @@
       z-index: -1;
     }
   }
+
   &__item {
     max-width: 370px;
     border: 1px solid #ececec;
     transition: all .3s;
+
     &:hover {
       box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
       border: none;
+
       .blog__item-link {
         color: $accent;
+
         &::after {
-           background-image: url('../images/icons/arrow-accent.svg');
+          background-image: url('../images/icons/arrow-accent.svg');
         }
       }
     }
   }
+
   &__item-imglink {
     display: block;
+
     img {
       height: 288px;
       object-fit: cover;
     }
   }
+
   &__item-box {
-   padding: 30px 40px;
+    padding: 30px 40px;
   }
 
   &__item-info {
@@ -619,10 +655,12 @@
     justify-content: space-between;
     margin-bottom: 20px;
   }
+
   &__item-author,
-   &__item-date {
+  &__item-date {
     padding-left: 30px;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -631,20 +669,20 @@
       left: 0;
       top: 4px;
       background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    }  
+      background-position: center center;
+      background-size: cover;
+    }
   }
 
   &__item-author {
     &::before {
-     background-image: url('../images/icons/user-grey.svg'); 
+      background-image: url('../images/icons/user-grey.svg');
     }
   }
 
   &__item-date {
-     &::before {
-     background-image: url('../images/icons/time.svg'); 
+    &::before {
+      background-image: url('../images/icons/time.svg');
     }
   }
 
@@ -659,24 +697,127 @@
     position: relative;
     transition: all .3s;
   }
-    &__item-link::after {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 8px;
-      top: 8px;
-      right: -14px;
-      background-image: url('../images/icons/arrow.svg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
 
-    }
-  
+  &__item-link::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    top: 8px;
+    right: -14px;
+    background-image: url('../images/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+  }
 }
+
 // start blog
 
+//start -- LOGIN, REGISTER PAGES --
+// start modal
+.modal {
+  padding-top: 100px;
+  max-width: 570px;
+  margin: 0 auto 115px;
 
+  &__links {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    @extend %roboto-400;
+    font-size: 22px;
+    color: $default;
+    text-transform: uppercase;
+    margin: 0 30px;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__label--checkbox {
+    margin-bottom: 16px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: $bg;
+    margin-top: 4px;
+    height: 60px;
+    padding: 0 15px;
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: $title;
+    text-transform: uppercase;
+    @extend %roboto-400;
+    padding: 14px 0;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__error {
+    margin-top: 12px;
+    color: $accent;
+    display: inline-block;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+}
+
+// 404 poge
+.page-404 {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  &__title {
+    color: $title;
+    @extend %roboto-700;
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 60px;
+    max-width: 470px;
+  }
+
+  &__link {
+    @extend %btn;
+  }
+}
+
+
+
+
+// end modal
+//end -- LOGIN, REGISTER PAGES --
 
 
 
