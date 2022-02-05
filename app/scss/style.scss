@@ -721,13 +721,14 @@
   padding-top: 100px;
   max-width: 570px;
   margin: 0 auto 115px;
+
   &__links {
     text-align: center;
     margin-bottom: 40px;
   }
 
   &__link {
-     @extend %roboto-400;
+    @extend %roboto-400;
     font-size: 22px;
     color: $default;
     text-transform: uppercase;
@@ -739,8 +740,8 @@
   }
 
   &__label {
-  display: block;
-   margin-bottom: 30px;
+    display: block;
+    margin-bottom: 30px;
   }
 
   &__label--checkbox {
@@ -763,20 +764,57 @@
     color: #fff;
     background-color: $title;
     text-transform: uppercase;
-     @extend %roboto-400;
-     padding: 14px 0;
-     border: none;
-     cursor: pointer;
+    @extend %roboto-400;
+    padding: 14px 0;
+    border: none;
+    cursor: pointer;
   }
+
   &__error {
     margin-top: 12px;
     color: $accent;
     display: inline-block;
   }
+
   &__text {
     margin-bottom: 25px;
   }
 }
+
+// 404 poge
+.page-404 {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  &__title {
+    color: $title;
+    @extend %roboto-700;
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 60px;
+    max-width: 470px;
+  }
+
+  &__link {
+    @extend %btn;
+  }
+}
+
+
+
 
 // end modal
 //end -- LOGIN, REGISTER PAGES --
