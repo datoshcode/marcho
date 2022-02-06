@@ -113,22 +113,91 @@
                 </button>
               </form>
             </div>
+            <!--start Filter price -->
             <div class="filter__item filter-price">
               <h3 class="filter__title">Price Filter</h3>
               <form class="filter-price__form" action="#">
-                <input class="filter-price__input" type="text" data-min="0" 
-                data-max="999" 
-                data-from="200" 
-                data-to="800">
+                <input class="filter-price__input" type="text" data-min="0" data-max="999" data-from="200" data-to="800">
                 <label class="filter-price__label">
-                  <span>Price:</span>
+                  <span>
+                    Price:
+                    $<span class="filter-price__from"></span> -
+                    $<span class="filter-price__to"></span>
+                  </span>
                   <button class="filter-price__btn" type="submit">
-                  Filter
-                </button>
+                    Filter
+                  </button>
                 </label>
-                
               </form>
             </div>
+            <!--end Filter price -->
+            <!--start Filter color -->
+            <div class="filter__item filter-color">
+              <h3 class="filter__title">Color Filter</h3>
+              <form class="filter-color__form" action="#">
+                <!--  Blue -->
+                <label class="filter-color__label">
+                  <span class="filter-color__text">
+                    Blue (15)
+                  </span>
+                  <div class="filter-color__box">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__checkbox filter-color__checkbox--blue"></span>
+                  </div>
+                </label>
+                <!-- Red -->
+                <label class="filter-color__label">
+                  <span class="filter-color__text">
+                    Red (09)
+                  </span>
+                  <div class="filter-color__box">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__checkbox filter-color__checkbox--red"></span>
+                  </div>
+                </label>
+                <!-- Green -->
+                <label class="filter-color__label">
+                  <span class="filter-color__text">
+                    Green (28)
+                  </span>
+                  <div class="filter-color__box">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__checkbox filter-color__checkbox--green"></span>
+                  </div>
+                </label>
+                <!-- Orange -->
+                <label class="filter-color__label">
+                  <span class="filter-color__text">
+                    Orange (11)
+                  </span>
+                  <div class="filter-color__box">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__checkbox filter-color__checkbox--orange"></span>
+                  </div>
+                </label>
+                <!-- Black -->
+                <label class="filter-color__label">
+                  <span class="filter-color__text">
+                    Black (05)
+                  </span>
+                  <div class="filter-color__box">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__checkbox filter-color__checkbox--black"></span>
+                  </div>
+                </label>
+                <!-- Purple -->
+                <label class="filter-color__label">
+                  <span class="filter-color__text">
+                    Purple (21)
+                  </span>
+                  <div class="filter-color__box">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__checkbox filter-color__checkbox--purple"></span>
+                  </div>
+                </label>
+              </form>
+            </div>
+            <!--end Filter color -->
             <!--end Search -->
           </div>
           <div class="shop__content"></div>
