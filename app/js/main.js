@@ -1,4 +1,10 @@
 $(function() {
+
+  // Фильтер стоимости товара
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$"
+  });
   
   // Слайдер
   $('.top-slider__inner').slick({
