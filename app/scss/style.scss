@@ -896,6 +896,7 @@
   height: 30px;
   background-color: #fff;
   box-shadow: 0px 0px 13px 0px rgba(90, 90, 90, 0.2);
+  cursor: pointer;
 }
 
 .irs--flat .irs-handle>i:first-child {
@@ -992,26 +993,30 @@
     position: relative;
     display: block;
   }
+
   &__input {
     @extend %checkbox-hidden;
-    &:checked + .filter-size__checkbox {
-    background-image: url('../images/icons/check-size.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: none;
-    & + .filter-size__text {
-      color: $accent;
-    }
+
+    &:checked+.filter-size__checkbox {
+      background-image: url('../images/icons/check-size.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: none;
+
+      &+.filter-size__text {
+        color: $accent;
+      }
     }
   }
+
   &__checkbox {
-  width: 20px;
-  height: 20px;
-  border: 1px solid $default;
-  position: absolute;
-  left: 0;
-  top: 1px;
-  border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $default;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    border-radius: 50%;
   }
 }
 
@@ -1020,18 +1025,22 @@
     margin-bottom: 15px;
     cursor: pointer;
     display: block;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
   &__input {
     @extend %checkbox-hidden;
-    &:checked + .filter-category__checkbox {
+
+    &:checked+.filter-category__checkbox {
       background-color: $accent;
       color: #fff;
 
     }
   }
+
   &__checkbox {
     background-color: $bg;
     color: $title;
@@ -1041,6 +1050,31 @@
   }
 }
 
+.filter-popular {
+  &__label {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 7px;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked+.filter-popular__checkbox {
+      background-color: $accent;
+      border-color: $accent;
+      color: #fff;
+    }
+  }
+
+  &__checkbox {
+    border: 1px solid $default;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+}
 
 
 // end -- SHOP page --
