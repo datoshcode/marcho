@@ -414,6 +414,112 @@
   max-width: 370px;
   text-align: center;
 
+  &.product-item--list {
+    min-width: 100%;
+    display: flex;
+    text-align: left;
+    .product-item__img-box::before {
+      display: none;
+    }
+
+    &:hover {
+      .product-item__link-box {
+        transform: translateY(-280%);
+      }
+    }
+
+    .product-item__img-box {
+      height: 250px;
+      min-width: 200px;
+      margin-bottom: 0;
+
+      img {
+        height: 250px;
+      }
+    }
+
+    .product-item__link-box {
+      background-color: transparent;
+      width: 115px;
+      box-shadow: none;
+      bottom: auto;
+
+
+      .product-item__link {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .product-item__link--line {
+        display: none;
+      }
+    }
+
+    .product-item__content-box {
+      display: block;
+    }
+
+    .product-item__box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .product-item__title {
+      order: -1;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 10px;
+      @extend %roboto-500;
+      font-size: 22px;
+    }
+
+    .product-item__price {
+      order: -1;
+      margin-left: -12px;
+    }
+
+    .product-item__text {
+      margin-bottom: 25px;
+    }
+
+    .star {
+      margin-left: 23px;
+    }
+
+    .product-item__btn {
+      padding: 11px 40px;
+      background-color: $title;
+      border: none;
+      color: #fff;
+      @extend %roboto-400;
+
+      &:hover {
+        border: none;
+        background-color: $accent;
+        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+        color: #fff;
+        cursor: pointer;
+
+      }
+    }
+
+    .product-item__wrapper-box {
+      padding: 30px 40px;
+      border: 1px solid $border;
+      border-left: none;
+    }
+  }
+
+  &__content-box {
+    display: none;
+  }
+
   &__img-box {
     position: relative;
     height: 370px;
@@ -444,7 +550,7 @@
   &__link--line::after {
     content: '';
     position: absolute;
-    background-color: #ececec;
+    background-color: $border;
     width: 1px;
     height: 30px;
     top: 10px;
@@ -619,7 +725,7 @@
 
   &__item {
     max-width: 370px;
-    border: 1px solid #ececec;
+    border: 1px solid $border;
     transition: all .3s;
 
     &:hover {
@@ -766,7 +872,6 @@
     @extend %roboto-400;
     padding: 14px 0;
     border: none;
-    cursor: pointer;
   }
 
   &__error {
@@ -866,7 +971,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
   }
 }
 
@@ -886,7 +990,7 @@
 .irs--flat .irs-line {
   top: 13px;
   height: 5px;
-  background-color: #ececec;
+  background-color: $border;
   border-radius: 0;
 }
 
@@ -896,6 +1000,7 @@
   height: 30px;
   background-color: #fff;
   box-shadow: 0px 0px 13px 0px rgba(90, 90, 90, 0.2);
+  cursor: pointer;
 }
 
 .irs--flat .irs-handle>i:first-child {
@@ -927,7 +1032,7 @@
 .filter-color {
   &__label {
     padding-bottom: 20px;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid $border;
     display: flex;
     justify-content: space-between;
 
@@ -992,26 +1097,30 @@
     position: relative;
     display: block;
   }
+
   &__input {
     @extend %checkbox-hidden;
-    &:checked + .filter-size__checkbox {
-    background-image: url('../images/icons/check-size.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: none;
-    & + .filter-size__text {
-      color: $accent;
-    }
+
+    &:checked+.filter-size__checkbox {
+      background-image: url('../images/icons/check-size.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: none;
+
+      &+.filter-size__text {
+        color: $accent;
+      }
     }
   }
+
   &__checkbox {
-  width: 20px;
-  height: 20px;
-  border: 1px solid $default;
-  position: absolute;
-  left: 0;
-  top: 1px;
-  border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $default;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    border-radius: 50%;
   }
 }
 
@@ -1020,18 +1129,22 @@
     margin-bottom: 15px;
     cursor: pointer;
     display: block;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
   &__input {
     @extend %checkbox-hidden;
-    &:checked + .filter-category__checkbox {
+
+    &:checked+.filter-category__checkbox {
       background-color: $accent;
       color: #fff;
 
     }
   }
+
   &__checkbox {
     background-color: $bg;
     color: $title;
@@ -1041,8 +1154,113 @@
   }
 }
 
+.filter-popular {
+  &__label {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 7px;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked+.filter-popular__checkbox {
+      background-color: $accent;
+      border-color: $accent;
+      color: #fff;
+    }
+  }
+
+  &__checkbox {
+    border: 1px solid $default;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+}
+
+// start shop-content
+.shop-content {
+  width: 100%;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $border;
+
+    .product-item {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__filter {
+    border: 1px solid $border;
+    padding: 20px 25px 20px 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__filter-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__filter-btn {
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: 15px;
+    line-height: 0;
+
+    &.shop-content__filter-btn--active {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.jq-selectbox__select {
+  height: 32px;
+  margin-left: 30px;
+  padding-right: 30px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  @extend %quicksand-500;
+  font-size: 16px;
+  color: $default;
+  text-shadow: none;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  background-image: url('../images/icons/angle-down.svg');
+  width: 10px;
+  height: 5px;
+  border: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
 
 
+
+
+
+// end shop-content
 // end -- SHOP page --
 
 
@@ -1066,7 +1284,7 @@
 
 .footer-top {
   padding: 70px 0 40px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $border;
   display: flex;
 
   &__contact {
