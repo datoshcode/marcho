@@ -30,6 +30,7 @@ $bg: #f6f6f6;
   font-weight: 700;
 }
 
+// Большая кнопка красного цвета сайта
 %btn {
   border: none;
   @extend %roboto-400;
@@ -42,19 +43,29 @@ $bg: #f6f6f6;
   cursor: pointer;
 }
 
+// Малая кнопка ссылка красного цвета на карточке товара 
 %link-btn {
   text-transform: uppercase;
-    color: $title;
-    display: inline-block;
-    border: 1px solid $accent;
-    padding: 14px 27px;
+  color: $title;
+  display: inline-block;
+  border: 1px solid $accent;
+  padding: 14px 27px;
+}
+
+// Скрыть элемент
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
 }
 
 // fancybox error
 @function max($numbers...) {
-  @return m#{a}x(#{$numbers}); 
- }
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers}); 
- }
+  @return m#{a}x(#{$numbers});
+}
 
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
