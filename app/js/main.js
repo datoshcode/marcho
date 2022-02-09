@@ -31,7 +31,7 @@ $(function() {
   });
 
   // Стилизация форм
-  $('.select-style').styler();
+  $('.select-style, .product-one__item-num').styler();
 
   // Фильтер стоимости товара
   $('.filter-price__input').ionRangeSlider({
