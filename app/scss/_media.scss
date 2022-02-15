@@ -1,0 +1,86 @@
+.top-slider,
+.categories-info,
+.video-fashion,
+.product,
+.promo,
+.partners,
+.blog,
+footer {
+	display: none;
+}
+// 1200 px
+@media (max-width: 1200px) {
+	.header {
+		&__inner {
+			padding-right: 10px;
+		}
+	}
+}
+
+// 860 px
+@media (max-width: 860px) {
+.menu {
+	order: 1;
+	margin-left: 40px;
+	&__list {
+	 transform: translateY(-200%);
+   position: absolute;
+   top: 120px;
+   left: 0;
+   width: 100%;
+   flex-direction: column;
+   align-items: center;
+   z-index: 5;
+   transition: all .3s;
+   &.menu__list--active {
+     transform: translateY(0);
+     
+   }
+	}
+	&__list-item+.menu__list-item {
+    padding-left: 15px;
+    transition: all .3s;
+  }
+  &__list-item {
+  	width: 100%;
+  	padding: 0 15px;
+  	text-align: center;
+  }
+  &__list-link {
+    padding: 12px 0;
+    display: block;
+  }
+	&__btn {
+		display: block;
+		width: 45px;
+		height: 45px;
+		border: none;
+		background-color: transparent;
+	}
+}
+
+.user-nav {
+ margin-left: auto;
+}
+}
+
+// 500 px
+@media (max-width: 500px) {
+	.header {
+		&__inner {
+			padding-right: 0;
+		}
+	}
+	.menu {
+		order: 0;
+		&__list {
+			top: 170px;
+		}
+	}
+	.user-nav {
+		width: 100%;
+		margin-top: 35px;
+		justify-content: flex-end;
+		padding-right: 15px;
+	}
+}

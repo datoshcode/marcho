@@ -10,6 +10,7 @@
 
   &__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -19,7 +20,9 @@
   &__list {
     display: flex;
   }
-
+  &__btn {
+    display: none;
+  }
   &__list-item+.menu__list-item {
     padding-left: 35px;
   }

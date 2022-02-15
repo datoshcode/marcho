@@ -1,4 +1,8 @@
 $(function() {
+
+  $('.menu__btn').on('click', function(){
+    $('.menu__list').toggleClass('menu__list--active');
+  });
   
   // Слайдер товара на странице blog.html
   $('.blog-page__slider').slick ({
