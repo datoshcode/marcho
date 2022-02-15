@@ -4,11 +4,11 @@
 .product,
 .promo,
 .partners,
-.blog,
-footer {
+.blog {
 	display: none;
 }
-// 1200 px
+
+// 1200px
 @media (max-width: 1200px) {
 	.header {
 		&__inner {
@@ -17,7 +17,18 @@ footer {
 	}
 }
 
-// 860 px
+// 1050px
+@media (max-width: 1050px) {
+	.footer-top {
+		flex-wrap: wrap;
+		&__item-form {
+			max-width: 100%;
+			margin-top: 30px;
+		}
+	}
+}
+
+// 860px
 @media (max-width: 860px) {
 .menu {
 	order: 1;
@@ -32,9 +43,9 @@ footer {
    align-items: center;
    z-index: 5;
    transition: all .3s;
+   background-color: #fff;
    &.menu__list--active {
      transform: translateY(0);
-     
    }
 	}
 	&__list-item+.menu__list-item {
@@ -58,13 +69,50 @@ footer {
 		background-color: transparent;
 	}
 }
-
 .user-nav {
  margin-left: auto;
 }
+ 	.footer-top {
+		&__contact {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
 }
 
-// 500 px
+// 620px
+@media (max-width: 620px) {
+.footer-bottom {
+	justify-content: center;
+	&__copy {
+		width: 100%;
+		text-align: center;
+	}
+	&__accept-img {
+		margin-left: 15px;
+	}
+}
+}
+
+// 550 px;
+@media (max-width: 550px) {
+.footer-top {
+		&__form {
+			flex-wrap: wrap;
+		}
+		&__form-input {
+     max-width: 100%;
+     margin-bottom: 10px;
+		}
+		&__form-btn {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+}
+
+// 500px
 @media (max-width: 500px) {
 	.header {
 		&__inner {
@@ -83,4 +131,32 @@ footer {
 		justify-content: flex-end;
 		padding-right: 15px;
 	}
+	.footer-top {
+&__drop-down {
+		cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    &::after {
+    	content: '';
+    	position: absolute;
+    	width: 10px;
+    	height: 10px;
+    	right: 30px;
+    	top: 5px;
+    	background-image: url('../images/icons/angle-arrow-down_icon.svg');
+    	background-repeat: no-repeat;
+    }
+	}
+	&__list {
+		display: none;
+	}
+ 	}	
+}
+
+@media (max-width: 450px) {
+  .footer-top {
+  	&__nav {
+  		margin-top: 30px;
+  	}
+  }
 }

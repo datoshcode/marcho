@@ -2295,18 +2295,6 @@ padding: 120px 0;
 }
 // end -- Contacts page --
 
-
-
-
-
-
-
-
-
-
-
-
-
 .footer {
   background-color: $bg;
 }
@@ -2402,9 +2390,15 @@ padding: 120px 0;
     @extend %btn;
     margin-left: 5px;
   }
+
+  &__drop-down {
+    pointer-events: none;
+  }
+
 }
 
 .footer-bottom {
+  min-height: 75px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
