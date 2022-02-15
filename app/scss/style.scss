@@ -10,6 +10,7 @@
 
   &__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -19,7 +20,9 @@
   &__list {
     display: flex;
   }
-
+  &__btn {
+    display: none;
+  }
   &__list-item+.menu__list-item {
     padding-left: 35px;
   }
@@ -2292,18 +2295,6 @@ padding: 120px 0;
 }
 // end -- Contacts page --
 
-
-
-
-
-
-
-
-
-
-
-
-
 .footer {
   background-color: $bg;
 }
@@ -2399,9 +2390,15 @@ padding: 120px 0;
     @extend %btn;
     margin-left: 5px;
   }
+
+  &__drop-down {
+    pointer-events: none;
+  }
+
 }
 
 .footer-bottom {
+  min-height: 75px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

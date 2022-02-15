@@ -1,0 +1,162 @@
+.top-slider,
+.categories-info,
+.video-fashion,
+.product,
+.promo,
+.partners,
+.blog {
+	display: none;
+}
+
+// 1200px
+@media (max-width: 1200px) {
+	.header {
+		&__inner {
+			padding-right: 10px;
+		}
+	}
+}
+
+// 1050px
+@media (max-width: 1050px) {
+	.footer-top {
+		flex-wrap: wrap;
+		&__item-form {
+			max-width: 100%;
+			margin-top: 30px;
+		}
+	}
+}
+
+// 860px
+@media (max-width: 860px) {
+.menu {
+	order: 1;
+	margin-left: 40px;
+	&__list {
+	 transform: translateY(-200%);
+   position: absolute;
+   top: 120px;
+   left: 0;
+   width: 100%;
+   flex-direction: column;
+   align-items: center;
+   z-index: 5;
+   transition: all .3s;
+   background-color: #fff;
+   &.menu__list--active {
+     transform: translateY(0);
+   }
+	}
+	&__list-item+.menu__list-item {
+    padding-left: 15px;
+    transition: all .3s;
+  }
+  &__list-item {
+  	width: 100%;
+  	padding: 0 15px;
+  	text-align: center;
+  }
+  &__list-link {
+    padding: 12px 0;
+    display: block;
+  }
+	&__btn {
+		display: block;
+		width: 45px;
+		height: 45px;
+		border: none;
+		background-color: transparent;
+	}
+}
+.user-nav {
+ margin-left: auto;
+}
+ 	.footer-top {
+		&__contact {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+// 620px
+@media (max-width: 620px) {
+.footer-bottom {
+	justify-content: center;
+	&__copy {
+		width: 100%;
+		text-align: center;
+	}
+	&__accept-img {
+		margin-left: 15px;
+	}
+}
+}
+
+// 550 px;
+@media (max-width: 550px) {
+.footer-top {
+		&__form {
+			flex-wrap: wrap;
+		}
+		&__form-input {
+     max-width: 100%;
+     margin-bottom: 10px;
+		}
+		&__form-btn {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+}
+
+// 500px
+@media (max-width: 500px) {
+	.header {
+		&__inner {
+			padding-right: 0;
+		}
+	}
+	.menu {
+		order: 0;
+		&__list {
+			top: 170px;
+		}
+	}
+	.user-nav {
+		width: 100%;
+		margin-top: 35px;
+		justify-content: flex-end;
+		padding-right: 15px;
+	}
+	.footer-top {
+&__drop-down {
+		cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    &::after {
+    	content: '';
+    	position: absolute;
+    	width: 10px;
+    	height: 10px;
+    	right: 30px;
+    	top: 5px;
+    	background-image: url('../images/icons/angle-arrow-down_icon.svg');
+    	background-repeat: no-repeat;
+    }
+	}
+	&__list {
+		display: none;
+	}
+ 	}	
+}
+
+@media (max-width: 450px) {
+  .footer-top {
+  	&__nav {
+  		margin-top: 30px;
+  	}
+  }
+}
