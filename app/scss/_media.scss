@@ -22,6 +22,15 @@
   }
 }
 
+// 1230px
+@media (max-width: 1230px) {
+  .page-404 {
+  	&__img {
+  		width: 40%;
+  	}
+  }
+}
+
 // 1200px
 @media (max-width: 1200px) {
   .header {
@@ -159,6 +168,13 @@
         width: 100%;
       }
     }
+  }
+}
+
+// 992px
+@media (max-width: 992px) {
+  .page-404__img {
+  	display: none;
   }
 }
 
@@ -474,6 +490,10 @@
     &__item {
       margin: 10px 25px;
     }
+  }
+
+  .page-404 {
+  	padding: 60px 0;
   }
 }
 
