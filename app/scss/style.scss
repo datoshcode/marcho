@@ -2098,6 +2098,9 @@
 
   .comments-form {
     border-bottom: none;
+    &__text-input {
+      margin-right: 10px;
+    }
   }
 
   &__box {
