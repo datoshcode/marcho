@@ -1,18 +1,23 @@
 $(function() {
 
-// Кнопка бургер меню для адаптива
-  $('.menu__btn').on('click', function(){
+  // Кнопка бургер меню для адаптива
+  $('.menu__btn').on('click', function() {
     $('.menu__list').toggleClass('menu__list--active');
   });
 
-// Выпадающий список в footer
-    $('.footer-top__title.footer-top__drop-down').on('click', function(){
-     $(this).next().slideToggle();
-     $(this).toggleClass('active');
-    });  
-  
+  // Кнопка скрыть и показать фильтр
+  $('.shop__filter-btn').on('click', function() {
+    $('.shop__filters').slideToggle();
+  });
+
+  // Выпадающий список в footer
+  $('.footer-top__title.footer-top__drop-down').on('click', function() {
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+  });
+
   // Слайдер товара на странице blog.html
-  $('.blog-page__slider').slick ({
+  $('.blog-page__slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="7px" height="14px" viewBox="0 0 7 14" version="1.1"><g><path d="M 5.25 12.25 C 5.027344 12.25 4.800781 12.164062 4.632812 11.992188 L 0.257812 7.617188 C -0.0859375 7.277344 -0.0859375 6.722656 0.257812 6.382812 L 4.632812 2.007812 C 4.972656 1.664062 5.527344 1.664062 5.867188 2.007812 C 6.210938 2.347656 6.210938 2.902344 5.867188 3.242188 L 2.113281 7 L 5.871094 10.757812 C 6.210938 11.097656 6.210938 11.652344 5.871094 11.996094 C 5.699219 12.164062 5.472656 12.25 5.25 12.25 Z M 5.25 12.25 "/></g></svg></button>',
     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="7px" height="14px" viewBox="0 0 7 14" version="1.1"><g><path d="M 1.75 12.25 C 1.527344 12.25 1.300781 12.164062 1.132812 11.992188 C 0.789062 11.652344 0.789062 11.097656 1.132812 10.757812 L 4.890625 7 L 1.132812 3.242188 C 0.789062 2.902344 0.789062 2.347656 1.132812 2.003906 C 1.472656 1.664062 2.027344 1.664062 2.367188 2.003906 L 6.742188 6.378906 C 7.085938 6.722656 7.085938 7.277344 6.742188 7.617188 L 2.367188 11.992188 C 2.199219 12.164062 1.972656 12.25 1.75 12.25 Z M 1.75 12.25 "/></g></svg></button>',
     infinite: false,
@@ -44,7 +49,8 @@ $(function() {
     fade: true
   });
 
-  // Сортировка на плитки или список товара на странице shop.html
+  // Сортировка на плитки или список товара на странице shop.html с 
+  // возможностю переключиния с grid на flex при адаптиве
   $('.shop-content__filter-btn').on('click', function() {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
     $(this).addClass('shop-content__filter-btn--active');
@@ -52,10 +58,12 @@ $(function() {
 
   $('.button-list').on('click', function() {
     $('.product-item').addClass('product-item--list');
+    $('.shop-content__inner').addClass('shop-content__nogrid');
   });
 
   $('.button-grid').on('click', function() {
     $('.product-item').removeClass('product-item--list');
+    $('.shop-content__inner').removeClass('shop-content__nogrid');
   });
 
   // Стилизация форм

@@ -951,6 +951,10 @@
     width: 370px;
     margin-right: 30px;
   }
+
+  &__filter-btn {
+    display: none;
+  }
 }
 
 .filter {
@@ -1244,6 +1248,12 @@
   }
 }
 
+.jq-selectbox {
+  li {
+    padding: 0 10px;
+  }
+}
+
 .jq-selectbox__select {
   height: 32px;
   margin-left: 30px;
@@ -1273,6 +1283,12 @@
   position: absolute;
   top: 12px;
   right: 12px;
+}
+
+.jq-selectbox__dropdown {
+  ul {
+    background-color: #fff;
+  }
 }
 
 // end shop-content
