@@ -46,7 +46,14 @@ $(function() {
     asNavFor: '.product-slide__thumb',
     draggable: false,
     arrows: false,
-    fade: true
+    fade: true,
+    responsive: [{
+      breakpoint: 1051,
+      settings: {
+        draggable: true,
+        autoplay: true,
+      }
+    }, ]
   });
 
   // Сортировка на плитки или список товара на странице shop.html с 

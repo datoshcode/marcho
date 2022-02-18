@@ -50,13 +50,13 @@ a {
 }
 
 .breadcrumps {
-   display: inline-flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   padding-left: 25px;
-   position: relative;
- 
-   &::before {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 25px;
+  position: relative;
+
+  &::before {
     content: '';
     position: absolute;
     background-image: url('../images/icons/home-icon.svg');
@@ -65,36 +65,41 @@ a {
     height: 16px;
     top: 3px;
     left: 0;
-   }
+  }
 
   &__list {
     display: flex;
   }
- &__item {
-  color: #727272;
-  padding-right: 40px;
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    background-image: url('../images/icons/angle_double-right.svg');
-    background-repeat: no-repeat;
-    width: 9px;
-    height: 10px;
-    top: 9px;
-    right: 15px;
-  }
-  &:last-child {
-    color: $accent;
-    padding-right: 0;
+
+  &__item {
+    color: #727272;
+    padding-right: 40px;
+    position: relative;
+
     &::after {
-    display: none;
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/angle_double-right.svg');
+      background-repeat: no-repeat;
+      width: 9px;
+      height: 10px;
+      top: 9px;
+      right: 15px;
+    }
+
+    &:last-child {
+      color: $accent;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
   }
- }
-} 
- &__link {
-  color: inherit;
- }
+
+  &__link {
+    color: inherit;
+  }
 }
 
 .header--404-page {
@@ -105,20 +110,25 @@ a {
   display: flex;
   justify-content: center;
   padding: 30px 0;
+
   &__list {
     display: flex;
     padding: 0 35px;
   }
+
   &__item {
     padding: 0 15px;
   }
+
   &__link--active {
     color: $accent;
     font-weight: 700;
   }
+
   &__arrows {
     text-transform: uppercase;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -130,18 +140,22 @@ a {
       background-size: cover;
     }
   }
+
   &__prev {
-   padding-left: 15px;
-   &::before {
-    background-image: url('../images/icons/angle-left.svg');
-    left: 0;
-   }
+    padding-left: 15px;
+
+    &::before {
+      background-image: url('../images/icons/angle-left.svg');
+      left: 0;
+    }
   }
+
   &__next {
-   padding-right: 15px;
-   &::before {
-    background-image: url('../images/icons/angle-right.svg');
-    right: 0;
-   }
+    padding-right: 15px;
+
+    &::before {
+      background-image: url('../images/icons/angle-right.svg');
+      right: 0;
+    }
   }
 }
